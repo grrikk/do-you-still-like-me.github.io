@@ -1,0 +1,74 @@
+            body {
+               /* margin-left: 15vh;
+                margin-right: 15vh; */
+                margin-top: 0;
+                margin-bottom: 0;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            hr {
+                width: 100%;
+                height: 10vh;
+                background: linear-gradient(blue, white, red, yellow, purple, teal, white);
+            }
+
+            .no {
+                background-color: red;
+                background-image: linear-gradient(to top right,
+                    rgb(0 0 0 / 0.2),
+                    rgb(0 0 0 / 0.2) 30%,
+                    transparent
+                    );
+                  box-shadow:
+                    inset -2px -2px 0px rgb(0 0 0 / 0.6),
+                    inset -2px -2px 3px rgb(255 255 255 / 0.6);
+                text-align: center;
+                color: white;
+                text-shadow: 1px 1px 1px black;
+                border: 1px black;
+                font-size: 2rem;
+                height: 10vh;
+                width: 20vh;
+            }
+
+            .no:hover {
+                background-color: crimson;
+                box-shadow:
+                    inset 2px 2px 3px rgb(0 0 0 / 0.6),
+                    inset -2px -2px 3px rgb(255 255 255 / 0.6);
+            }
+
+            .yes {
+                background-image: linear-gradient(white at top right, tomato);
+                background-color: darkgreen;
+                text-align: center;
+                color: white;
+                font-size: 2rem;
+                text-shadow: 1px 1px 1px black;
+                border: 1px black;
+                height: 10vh;
+                width: 20vh;
+                box-shadow:
+                    inset -2px -2px 0px rgb(0 0 0 / 0.6),
+                    inset -2px -2px 3px rgb(255 255 255 / 0.6);
+
+            }
+
+            .yes:hover {
+                background-color: green;
+                box-shadow:
+                    inset 2px 2px 3px rgb(0 0 0 / 0.6),
+                    inset -2px -2px 3px rgb(255 255 255 / 0.6);
+            }
+
+            .question-box {
+                text-align: center;
+            }
+
+            .hidden {
+                display: none;
+            }

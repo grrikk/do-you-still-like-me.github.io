@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Do you still like me?</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+    <body>
+        <hr>
+        <h1>Please answer the following questions:</h1>
+        <br><br>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="2c4489b2-fc72-4db1-a4f4-d85429d17626">
+            <!-- Store choices in hidden inputs as the user clicks -->
+            <input type="hidden" id="answer1" name="Question_1_Choice">
+            <input type="hidden" id="answer2" name="Question_2_Choice">
+            <input type="hidden" id="answer3" name="Question_3_Choice">
+            <div id="q1" class="question-box">
+                <p>Do you still like me?</p>
+                <button class="yes" type="button" onclick="advanceButton(1, 'yes')">yes</button>
+                <button class="no" type="button" onclick="advanceButton(1, 'no')">no</button>
+            </div>
+            <div id="q2" class="question-box hidden">
+                <p>Are you made at me?</p>
+                <button class="yes" type="button" onclick="advanceButton(2, 'yes')">yes</button>
+                <button class="no" type="button" onclick="advanceButton(2, 'no')">no</button>
+            </div>
+            <div id="q3" class="question-box hidden">
+                <p>Do you still think I'm annoying?</p>
+                <button class="yes" type="button" onclick="advanceButton(3, 'yes')">yes</button>
+                <button class="no" type="button" onclick="advanceButton(3, 'no')">no</button>
+            </div>
+        </form>
+        <div id="q4" class="question-box hidden">
+            <p>Thank you for your response. Click the link below for a special message from me.</p>
+            <br>
+            <a href="./images/special-message.mp4">&hearts;Click Here!&hearts;</a>
+        </div>
+        <script>
+            function advanceButton(currentStep, choice) {
+            // record response
+            document.getElementById('answer' + currentStep).value = choice;
+
+            // Hide the current step container
+            document.getElementById('q' + currentStep).classList.add('hidden');
+
+            // Show the next step container
+            let nextStep = currentStep + 1;
+            let nextElement = document.getElementById('q' + nextStep);
+
+            if (nextElement) {
+                nextElement.classList.remove('hidden');
+            }
+        }
+        </script>
+    </body>
+</html
