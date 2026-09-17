@@ -9,7 +9,7 @@
         <hr>
         <h1>Please answer the following questions:</h1>
         <br><br>
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST" id="myForm">
             <input type="hidden" name="access_key" value="2c4489b2-fc72-4db1-a4f4-d85429d17626">
             <!-- Store choices in hidden inputs as the user clicks -->
             <input type="hidden" id="answer1" name="Question_1_Choice">
@@ -50,6 +50,9 @@
 
             if (nextElement) {
                 nextElement.classList.remove('hidden');
+            }
+            if (currentStep == 3) {
+                document.getElementById('myForm').submit();
             }
         }
         </script>
